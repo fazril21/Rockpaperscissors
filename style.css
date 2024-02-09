@@ -3,10 +3,22 @@ body,html{
     height: 100%;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top{
+    background-color: red;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 240px;
 }
 .container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -14,23 +26,30 @@ body,html{
 .gambar img{
     width: 100px;
     height: 100px;
+    margin-left: 30px;
 }
 .gambar{
     display: flex;
+    flex-direction: column;
     background-color: rgb(101, 101, 101);
-    width: 700px;
-    height: 200px;
+    width: 200px;
+    height: 500px;
     justify-content: center;
     align-items: center;
-    gap: 100px;
-    border-radius: 10px 10px 0 0;
+    gap: 10px;
+    border-radius: 10px 0 0 10px;
+}
+.images{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 .hasil{
     display: flex;
     flex-direction: column;
     background-color: blue;
-    width: 700px;
-    height: 200px;
+    width: 500px;
+    height: 500px;
     justify-content: center;
     align-items: center;
 }.hasilNya{
@@ -45,25 +64,50 @@ body,html{
     align-items: center;
 }
 .gambar img:hover{
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
     cursor: pointer;
 }
 .enemy{
     display: flex;
     flex-direction: column;
     background-color: rgb(101, 101, 101);
-    width: 700px;
-    height: 200px;
-    justify-content: center;
+    width: 200px;
+    height: 500px;
     align-items: center;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 10px 10px 0px;
     
 }
 .textComp{
     width: 200px;
 }
+
+.resultComp{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: center;
+}
 .result{
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+}
+.player{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.player span{
+    font-size: 60px;
+}
+.computer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.computer span{
+    font-size: 60px;
 }

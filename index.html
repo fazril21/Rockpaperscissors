@@ -7,13 +7,33 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="top">
+        <div class="player">
+            <h1 class="textPlayer">
+                PLAYER
+            </h1>
+            <span id="scorePlayer">0</span>
+        </div>
+        <div>
+
+        </div>
+        <div class="computer">
+            <h1 class="textComp">
+                COMPUTER
+            </h1>
+            <span id="scoreComp">0</span>
+        </div>
+    </div>
     <div class="container">
         <div class="gambar">
-            <img src="img/paper.png" alt="" id="kertas">
-            <img src="img/rock.png" alt="" id="batu">
-            <img src="img/scissors.png" alt="" id="gunting">
+            <div class="images">
+                <img src="img/paper.png" alt="" id="kertas">
+                <img src="img/rock.png" alt="" id="batu">
+                <img src="img/scissors.png" alt="" id="gunting">
+            </div>
         </div>
         <div class="hasil">
+            <h1 class="finalResult"></h1>
             <h2>HASILNYA</h2>
             <div>
                 <h1 class="hasilNya">
@@ -22,11 +42,11 @@
             </div>
         </div>
         <div class="enemy">
-            <h1 class="textComp">COMPUTER</h1>
             <div class="resultComp">
-                <img src="" alt="" class="result">
+                <img src="img/IMG_20200114_070314.jpg" alt="" class="result">
             </div>
         </div>
+        <p class="info" id="info"></p>
     </div>
     <script src="main.js"></script>
 </body>

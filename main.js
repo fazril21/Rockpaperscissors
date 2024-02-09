@@ -21,36 +21,63 @@ function playRound(playerSelection, computerSelection){
 
 }
 
-// function playGame(){
-//     const computer = getComputerChoise()
-//     const pilih = img.id
+let scoreComp = document.getElementById('scoreComp');
+let scorePlayer = document.getElementById('scorePlayer')
 
-//     const hasil = playRound (pilih,computer)
+let skorPlayer = 0;
+let skorComputer = 0;
+
+
+function playGame(pilihanSaya){
+    const computer = getComputerChoise()
     
-//     console.log('Pilihan Saya : ',pilih)
-//     console.log('Pilihan Komputer : ',computer)
-//     console.log('Pilihan Saya : ',hasil)
-// }
+    const hasil = playRound (pilihanSaya,computer)
+    const hasilNya = document.querySelector('.hasilNya')
+
+    if(skorComputer == 3 || skorPlayer ==3) return;
+
+    if(hasil == 'Menang') {
+        skorPlayer += 1
+        scorePlayer.textContent = skorPlayer
+    }else if (hasil == 'Kalah'){
+        skorComputer += 1
+        scoreComp.textContent = skorComputer
+    }else{}
+
+    const finalResult = document.querySelector('.finalResult')
+    if(skorComputer == 3)return finalResult.textContent = 'COMPUTER MENANG !!!!'
+    if(skorPlayer == 3) return finalResult.textContent = 'SAYA MENANG !!!!'
+
+
+
+    hasilNya.innerHTML = hasil
+
+    const result = document.querySelector('.result')
+    if(computer == 'batu') return result.src = 'img/rock.png'
+    if(computer == 'kertas') return result.src = 'img/paper.png'
+    if(computer == 'gunting') return result.src = 'img/scissors.png'
+
+
+
+}
 
 const pilihan = document.querySelectorAll('img')
-
 pilihan.forEach(function(img){
     img.addEventListener('click',function(){
-        const computer = getComputerChoise()
-        const pilih = img.id 
-        const hasil = playRound (pilih,computer)
-        const hasilNya = document.querySelector('.hasilNya')
-
-        hasilNya.innerHTML = hasil
-
-        const result = document.querySelector('.result')
-
-        if(computer == 'batu') return result.src = 'img/rock.png'
-        if(computer == 'kertas') return result.src = 'img/paper.png'
-        if(computer == 'gunting') return result.src = 'img/scissors.png'
+        const player = img.id
+        playGame(player)
         
     })
 })
+
+
+
+
+
+
+
+
+
 
 
 
